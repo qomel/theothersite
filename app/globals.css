@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cormorant: var(--cormorant);
+  --font-italiana: var(--italiana);
+  --font-dm: var(--dm);
+
+  --color-primary: #1a0007;
+  --color-secondary: #260009;
+  --color-accent: #68001a;
+  --color-cream: #fcf5e5;
+  --color-navy: #0a0a1a;
+
+  --animate-fade-up-1: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  --animate-fade-up-2: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+  --animate-fade-up-3: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+  --animate-fade-down: fadeDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  --animate-fade-in-1: fadeIn 0.8s ease 0.1s both;
+  --animate-fade-in-2: fadeIn 0.8s ease 0.2s both;
+  --animate-fade-in-3: fadeIn 0.8s ease 0.35s both;
+  --animate-fade-in-4: fadeIn 0.8s ease 0.5s both;
+  --animate-fade-in-5: fadeIn 0.8s ease 0.65s both;
+  --animate-scroll-pulse: scrollPulse 2.4s ease-in-out infinite;
+  --animate-marquee-left: marquee-left 36s linear infinite;
+  --animate-marquee-right: marquee-right 36s linear infinite;
+  --animate-dot-pulse: dotPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dotPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes barPulse {
+  0%,
+  100% {
+    width: 22px;
+  }
+  50% {
+    width: 7px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-14px) scale(0.97);
+  }
+}
