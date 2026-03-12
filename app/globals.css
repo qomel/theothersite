@@ -188,3 +188,69 @@ body.hovering .cursor {
     cursor: none !important;
   }
 }
+
+/* ─── Fullscreen Menu ─── */
+.fullmenu {
+  clip-path: circle(0% at calc(100% - 62px) 58px);
+  transition: clip-path 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+  pointer-events: none;
+}
+
+.fullmenu.open {
+  clip-path: circle(150% at calc(100% - 62px) 58px);
+  pointer-events: all;
+}
+
+.fullmenu-item {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(252, 245, 229, 0.12);
+}
+
+.fullmenu-item:last-of-type {
+  border-bottom: none;
+}
+
+.fullmenu-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 245, 229, 0.04);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  pointer-events: none;
+}
+
+.fullmenu-item:hover::after {
+  transform: scaleX(1);
+}
+
+.fullmenu-name {
+  font-family: var(--italiana, serif);
+  font-size: clamp(48px, 8vw, 96px);
+  color: rgba(252, 245, 229, 0.8);
+  line-height: 1;
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.fullmenu-item:hover .fullmenu-name {
+  color: rgba(252, 245, 229, 1);
+  letter-spacing: 0.03em;
+}
+
+/* ─── Hamburger Lines ─── */
+.hamburger-line {
+  display: block;
+  height: 1.5px;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.3s ease, background-color 0.4s ease;
+}
