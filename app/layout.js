@@ -24,7 +24,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  title: "THEOTHERSITE",
+  title: "THEOTHERSITE — Dominik Pazurek",
+  description:
+    "Portfolio of Dominik Pazurek — Frontend Developer crafting digital experiences with precision and passion.",
 };
 
 export default function RootLayout({ children }) {
