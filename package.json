@@ -18,5 +18,12 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4"
-  }
+  },
+  "description": "Personal portfolio \u2014 Dominik Pazurek",
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "frontend"
+  ],
+  "author": "Dominik Pazurek"
 }
