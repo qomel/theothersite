@@ -465,3 +465,32 @@ body.hovering .cursor {
 .about-bio.visible .accent-line {
   transform: scaleX(1);
 }
+
+/* ─── Resume Timeline Cards ─── */
+.rt-card {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rt-left {
+  text-align: right;
+  padding-right: 40px;
+  transform: translateX(-28px);
+}
+
+.rt-right {
+  text-align: left;
+  padding-left: 40px;
+  transform: translateX(28px);
+}
+
+.rt-row.visible .rt-card {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.rt-row.visible .rt-node {
+  background: #68001a;
+  box-shadow: 0 0 0 4px rgba(104, 0, 26, 0.15), 0 0 16px rgba(104, 0, 26, 0.4);
+  border-color: rgba(104, 0, 26, 0.5);
+}
